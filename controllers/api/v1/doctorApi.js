@@ -4,6 +4,7 @@ const { findOne } = require('../../../models/doctor');
 
 // create doctor in db and register
 module.exports.createDoctor = async function (req, res) {
+
     if (req.body.password != req.body.confirm_password) {
         console.log('passwords did not match!');
         return res.json(422, {
@@ -71,7 +72,7 @@ module.exports.loginDoctor = async function(req, res) {
         return res.json(200, {
             message: 'Login Successful and here is your token',
             data: {
-                jwtToken: jwt.sign(doctor.toJSON(), 'hospitalapi', { expiresIn: '200000' })
+                jwtToken: jwt.sign(doctor.toJSON(), 'hospitalapi', { expiresIn: '400000' })
             } 
         });
 
