@@ -19,6 +19,7 @@ const patientSchema = mongoose.Schema({
         }
     ]
 }, {
+    // keeping track
     timestamps: true
 });
 
