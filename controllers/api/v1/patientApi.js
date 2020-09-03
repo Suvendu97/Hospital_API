@@ -4,7 +4,7 @@ const Patient = require('../../../models/patient');
 const Report = require('../../../models/report');
 
 // status only within this array
-let arrayStatus = ['Negative', 'Travelled-Quarantine', 'Symptoms-Quarantine', 'Positive-Admit'];
+let arrayStatus = ['Negative', 'Travelled-Quarantine', 'Symptoms-Quarantine', 'Positive-Admit', 'Cured'];
 
 // Registering the patient using phone number and name
 module.exports.registerPatient = async function (req, res) {
